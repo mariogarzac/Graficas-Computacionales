@@ -36,6 +36,7 @@ public class objectClicker : MonoBehaviour
 
     private playOpenBook pob;
     private playCloseBook pcb;
+    private GameObject selectedBook;
 
 
     void Start() {
@@ -89,6 +90,8 @@ public class objectClicker : MonoBehaviour
                     if (hit.transform != null) {
                         print(hit.transform.gameObject.name);
                         isBookOpen = openBook.open();
+                        selectedBook = hit.transform.gameObject;
+                        selectedBook.GetComponent<hover>().select();
                         pob.playOpen();
                         if (hit.transform.gameObject.name == "book00") {
                             text1 = b1p1;
@@ -135,6 +138,7 @@ public class objectClicker : MonoBehaviour
     IEnumerator CloseMyBook() {
         openBook.close();
         pcb.playClose();
+        selectedBook.GetComponent<hover>().deSelect();
         yield return new WaitForSecondsRealtime(0.75f);
         isBookOpen = false;
     }
