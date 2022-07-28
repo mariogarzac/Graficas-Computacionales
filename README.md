@@ -11,6 +11,10 @@ Para agregar movimiento, tenemos planeado mostrar el texto de estos mismo, al se
 Como referencia estaremos utilizando juegos del género RPG como Skyrim o The Witcher 3.
 
 ## Referencias
+#### Modelos:
+
+Todos los modelos se hicieron en Tinkercad por los integrantes del equipo.
+
 #### Texturas: 
 
 - [Textura de madera](https://polyhaven.com/a/wood_table_001)
@@ -24,4 +28,11 @@ Como referencia estaremos utilizando juegos del género RPG como Skyrim o The Wi
 - El Manifesto del Partido Comunista de Alemania - Karl Marx & Frederick Engels
 - El Hobbit - J.R.R. Tolkien
 - El Ingenioso Hidalgo Don Quijote de La Mancha - Miguel de Cervantes
+- Mistborn - Brandon Sanderson
 - Beowulf - Desconocido
+
+#### Sonidos
+
+- Harvest Dawn - Soundtrack de Oblivion
+- https://pixabay.com/sound-effects/search/page%20turning/?order=None
+- https://mixkit.co/free-sound-effects/discover/close-book/

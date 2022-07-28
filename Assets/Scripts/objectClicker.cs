@@ -34,6 +34,9 @@ public class objectClicker : MonoBehaviour
     private string text1;
     private string text2;
 
+    private playOpenBook pob;
+    private playCloseBook pcb;
+
 
     void Start() {
     //    openBook = GameObject.Find("Open_Book/openBook");
@@ -42,6 +45,9 @@ public class objectClicker : MonoBehaviour
         openBook = FindObjectOfType<bookAppear>();
         change1 = FindObjectOfType<changeText>();
         change2 = FindObjectOfType<changeText2>(); 
+        pob = FindObjectOfType<playOpenBook>();
+        pcb = FindObjectOfType<playCloseBook>();
+
         b1p1 = "Sing to me of the man, Muse, the man of twists and turns ... driven time and again off course, once he had plundered the hallowed heights of Troy. Many cities of men he saw and learned their minds, many pains he suffered, heartsick on the open sea, fighting to save his life and bring his comrades home. But he could not save them from disaster, hard as he strove the recklessness of their own ways destroyed them all, the blind fools,";
         b1p2 = " they devoured the cattle of the Sun and the Sungod blotted out of the day of their return. Launch out on his story, Muse, daughter of Zeus start from where you will—sing for our time too. \nBy now, all the survivors, all who avoided headlong death were safe at home, escaped the wars and waves. \nBut one man alone... his heart set on his wife and his return.";
 
@@ -69,6 +75,11 @@ public class objectClicker : MonoBehaviour
 
     // Update is called once per frame
     private void Update() {
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            print("Q pressed");
+            Application.Quit();
+        }
+
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -78,6 +89,7 @@ public class objectClicker : MonoBehaviour
                     if (hit.transform != null) {
                         print(hit.transform.gameObject.name);
                         isBookOpen = openBook.open();
+                        pob.playOpen();
                         if (hit.transform.gameObject.name == "book00") {
                             text1 = b1p1;
                             text2 = b1p2;
@@ -110,7 +122,7 @@ public class objectClicker : MonoBehaviour
             }   
         } else {
             if (Input.GetKeyDown(KeyCode.Escape)) {
-                isBookOpen = openBook.close();
+                StartCoroutine(CloseMyBook());
             }
         }
         
@@ -118,5 +130,12 @@ public class objectClicker : MonoBehaviour
 
     private void PrintName(GameObject go) {
         print(go.name);
+    }
+
+    IEnumerator CloseMyBook() {
+        openBook.close();
+        pcb.playClose();
+        yield return new WaitForSecondsRealtime(0.75f);
+        isBookOpen = false;
     }
 }

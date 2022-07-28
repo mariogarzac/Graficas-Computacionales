@@ -13,7 +13,7 @@ public class bookAppear : MonoBehaviour
     {
         isOpen = false;
         Vec = transform.localPosition;
-        speed = 0.75f;
+        speed = 2.5f;
         ogVec = Vec;
     }
 
