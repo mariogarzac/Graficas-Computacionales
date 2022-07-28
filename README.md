@@ -13,9 +13,9 @@ Como referencia estaremos utilizando juegos del género RPG como Skyrim o The Wi
 ## Referencias
 #### Texturas: 
 
-[Textura de madera](https://polyhaven.com/a/wood_table_001)
-[Textura de pared de ladrillos](https://www.pinterest.com/pin/250020216790423785/)
-[Textura para los libros](https://secure.img1-fg.wfcdn.com/im/68122010/compr-r85/3670/36702552/Tektile+12%22+x+24%22+Porcelain+Fabric+look+Tile+in+Matte+glaze+Gray.jpg)
+- [Textura de madera](https://polyhaven.com/a/wood_table_001)
+- [Textura de pared de ladrillos](https://www.pinterest.com/pin/250020216790423785/)
+- [Textura para los libros](https://secure.img1-fg.wfcdn.com/im/68122010/compr-r85/3670/36702552/Tektile+12%22+x+24%22+Porcelain+Fabric+look+Tile+in+Matte+glaze+Gray.jpg)
 
 #### Textos:
 
